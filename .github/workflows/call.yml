@@ -1,0 +1,18 @@
+name: Workflow to call
+
+on:
+  workflow_call:
+    inputs:
+      echo_string:
+        description: The string to echo.
+        required: true
+        type: string
+
+jobs:
+  sample:
+    name: Sample echo
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Echo the input
+        run: echo ${{ github.event.input.echo_string }}
