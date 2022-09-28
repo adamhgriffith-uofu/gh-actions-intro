@@ -27,3 +27,6 @@ jobs:
         with:
           fetch-depth: 0
           path: ./checkout
+
+      - name: Run script
+        run: source ./checkout/scripts/hello-world.sh
