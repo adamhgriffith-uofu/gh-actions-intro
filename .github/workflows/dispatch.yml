@@ -1,7 +1,7 @@
-name: Workflow to call
+name: Workflow to dispatch
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       echo_string:
         description: The string to echo.
