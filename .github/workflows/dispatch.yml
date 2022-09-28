@@ -20,7 +20,7 @@ jobs:
           fetch-depth: 0
           path: ./checkout
           repository: ${{ github.repository }}
-          refs: main
+          ref: refs/heads/main
 
       - name: Echo the input
         run: echo "${{ github.event.input.echo_string }}"
