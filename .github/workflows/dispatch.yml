@@ -23,4 +23,4 @@ jobs:
           ref: refs/heads/main
 
       - name: Echo the input
-        run: echo "${{ github.event.input.echo_string }}"
+        run: echo "${{ github.event.inputs.echo_string }}"
