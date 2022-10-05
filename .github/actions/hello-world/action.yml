@@ -12,4 +12,4 @@ runs:
   steps:
     - name: Echo the input
       run: echo "${{ inputs.echo_string }}"
-      shell: /bin/bash
+      shell: bash
