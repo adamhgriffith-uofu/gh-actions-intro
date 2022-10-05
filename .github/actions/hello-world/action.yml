@@ -1,11 +1,15 @@
-name: xxxx
-description: xxxx
+name: Hello World
+description: This pair of steps will echo Hello world
 
 inputs:
-  xxxx
+  echo_string:
+    description: The string to echo.
+    required: true
 
 runs:
   using: composite
 
   steps:
-    - xxxx
+    - name: Echo the input
+      run: echo "${{ inputs.echo_string }}"
+      shell: /bin/bash

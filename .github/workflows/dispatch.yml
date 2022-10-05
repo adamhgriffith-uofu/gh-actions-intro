@@ -22,5 +22,10 @@ jobs:
           repository: ${{ github.repository }}
           ref: refs/heads/main
 
+#      - name: Echo the input
+#        run: echo "${{ github.event.inputs.echo_string }}"
+
       - name: Echo the input
-        run: echo "${{ github.event.inputs.echo_string }}"
+        uses: adamhgriffith-uofu/gh-actions-intro/.github/actions/hello-world@main
+        with:
+          echo_string: "Hello world"
