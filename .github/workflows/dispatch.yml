@@ -28,4 +28,4 @@ jobs:
       - name: Echo the input
         uses: ./.github/actions/hello-world@main
         with:
-          echo_string: "Hello world"
+          echo_string: "${{ github.event.inputs.echo_string }}"
