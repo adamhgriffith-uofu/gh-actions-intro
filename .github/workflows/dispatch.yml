@@ -26,6 +26,6 @@ jobs:
 #        run: echo "${{ github.event.inputs.echo_string }}"
 
       - name: Echo the input
-        uses: actions/hello-world@main
+        uses: adamhgriffith-uofu/gh-actions-intro/.github/actions/hello-world@main
         with:
           echo_string: "${{ github.event.inputs.echo_string }}"
