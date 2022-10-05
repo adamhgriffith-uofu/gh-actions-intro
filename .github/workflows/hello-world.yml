@@ -1,14 +1,14 @@
 name: Hello world
-concurrency:
-  group: hw-${{ github.repository }}-${{ github.ref }}
+#concurrency:
+#  group: hw-${{ github.repository }}-${{ github.ref }}
 
 on:
   push:
     branches:
       - main
 
-env:
-  ECHO_STRING: "Hello"
+#env:
+#  ECHO_STRING: "Hello"
 
 jobs:
   sample:
@@ -16,24 +16,24 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Echo Hello
-        run: echo "${{ env.ECHO_STRING }}"
+#      - name: Echo Hello
+#        run: echo "${{ env.ECHO_STRING }}"
 
       - name: Echo World
         run: echo "World"
 
-  script:
-    name: "Run the hello-world.sh script"
-    runs-on: ubuntu-20.04
-    needs:
-      - sample
-
-    steps:
-      - name: Check out repo
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          path: ./checkout
-
-      - name: Run script
-        run: source ./checkout/scripts/hello-world.sh
+#  script:
+#    name: "Run the hello-world.sh script"
+#    runs-on: ubuntu-20.04
+#    needs:
+#      - sample
+#
+#    steps:
+#      - name: Check out repo
+#        uses: actions/checkout@v3
+#        with:
+#          fetch-depth: 0
+#          path: ./checkout
+#
+#      - name: Run script
+#        run: source ./checkout/scripts/hello-world.sh
