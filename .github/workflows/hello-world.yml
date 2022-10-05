@@ -1,4 +1,6 @@
 name: Hello world
+concurrency:
+  group: hw-${{ github.repository }}-${{ github.ref }}
 
 on:
   push:
@@ -15,7 +17,7 @@ jobs:
 
     steps:
       - name: Echo Hello
-        run: echo "{{ env.ECHO_STRING }}"
+        run: echo "${{ env.ECHO_STRING }}"
 
       - name: Echo World
         run: echo "World"
